@@ -1,24 +1,79 @@
-@import url(variables-functions.scss);
+@import 'variables-functions';
 
 header {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
-    font-family: 'Roboto Mono', monospace;
+    padding: 0.5rem 1.5rem 0 1.5rem;
+    background-color: $header-color;
+    
+    a{
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover {
+            color: $hover-color;
+        }
+
+    }
 }
 
-nav {
+
+.logo_container {
+    position: relative;
+
+    h1 {
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 1;
+        
+    }
+
+    img {
+        position: absolute;
+        width: 3.3rem;
+        top: 0;
+        left: 0.6rem;
+
+        &:hover {
+            animation: pop 0.6s ease-in 1 backwards;
+        }
+    }
+} 
+
+.nav_container {
 
     justify-self: end;
-    padding-right: 2rem;
 
     ul {
-        font-size: 1.3rem;
+        font-size: 0.7rem;
         list-style: none;
         display: flex;
         justify-content: center;
         align-items: end;
-        gap: 1.9rem;
+        gap: 1.5rem;
     }  
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
