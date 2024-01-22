@@ -1,0 +1,20 @@
+@import url(variables-functions.scss);
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+nav {
+  justify-self: end;
+  padding-right: 2rem;
+}
+nav ul {
+  font-size: 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 1.9rem;
+}/*# sourceMappingURL=Header.css.map */
