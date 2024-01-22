@@ -4,7 +4,7 @@ import Footer from "../layout/Footer"
 
 function Game() {
     return (
-        <div>
+        <div className="content">
             <Header/>
             <h1>Game</h1>
             <GameWarning title='WON' description='ipsum lorem dolor sit amat '/>

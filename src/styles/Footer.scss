@@ -1,0 +1,36 @@
+@import 'variables-functions';
+
+footer {
+    background-color: $header-color;
+    font-size: 0.7rem;
+    padding: 1rem 0;
+
+    @include flex-center-column;
+
+    gap: 0.5rem;
+
+    h3 {
+        font-size: 1rem;
+    }
+    
+
+    ul {
+        list-style: none;
+        
+        li {
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+}
+
+.footer_icons {
+
+    @include flex-center-line;
+    gap: 0.5rem;
+
+    svg {
+        font-size: 1rem;
+        fill: $text-color;
+    }
+}

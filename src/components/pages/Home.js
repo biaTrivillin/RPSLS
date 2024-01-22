@@ -4,7 +4,7 @@ import Footer from '../layout/Footer'
 
 function Home() {
     return (
-        <div>
+        <div className="content">
             <Header/>
             <section>
                 <div>

@@ -8,5 +8,17 @@ $hover-color: #A6281C;
 $principal-font: 'Roboto Mono', monospace;
 
 
+@mixin flex-center-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-center-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
