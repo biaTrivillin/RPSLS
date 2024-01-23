@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Mono:wght@500;600;700&display=swap');
 
 $background-color: #003E43; 
 $text-color: #D9D9D9; 
@@ -6,6 +6,7 @@ $header-color: #065856;
 $hover-color: #A6281C;
 
 $principal-font: 'Roboto Mono', monospace;
+$secundray-font: 'Lato', sans-serif;
 
 
 @mixin flex-center-column {

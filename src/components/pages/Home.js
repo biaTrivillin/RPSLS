@@ -20,18 +20,18 @@ function Home() {
                     <img src={SpockHand} alt=""/>
                 </div>
 
-                <Button className='home_btn' cta='KNOW MORE'/>
+                <Button cta='KNOW MORE'/>
             </section>
 
             <section className='know_more_content'>
-                <div>
+                <div className="game_history_content">
                     <article>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quam rhoncus fringilla consectetur. Aenean dapibus neque vel leo viverra, et consectetur turpis placerat. 
                     </article>
                     <img src='' alt=''/>
                 </div>
 
-                <div>
+                <div className="game_rules">
                     <article>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quam rhoncus fringilla consectetur. Aenean dapibus neque vel leo viverra, et consectetur turpis placerat. 
                     </article>
