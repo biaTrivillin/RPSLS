@@ -4,8 +4,9 @@ header {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
-    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    padding: 1.5rem 2rem 0.3rem 2rem;
     background-color: $header-color;
+    height: 6.5rem;
     
     a{
         text-decoration: none;
@@ -21,19 +22,20 @@ header {
 
 .logo_container {
     position: relative;
+    align-self: center;
 
-    h1 {
-        font-size: 1.5rem;
-        position: relative;
-        z-index: 1;
+    a {
+        font-size: 2rem;
         
     }
 
     img {
         position: absolute;
-        width: 3.3rem;
+        width: 4rem;
         bottom: 0;
-        left: 0.6rem;
+        left: 1.2rem;
+        opacity: 0.5;
+        // z-index: -1;
 
         &:hover {
             animation: pop 0.6s ease-in 1 backwards;
@@ -43,13 +45,13 @@ header {
 
 .nav_container {
 
-    justify-self: end;
+    align-self: center;
 
     ul {
-        font-size: 0.7rem;
+        font-size: 3rem;
         list-style: none;
         display: flex;
-        justify-content: center;
+        justify-content: end;
         align-items: end;
         gap: 1.5rem;
     }  
@@ -62,6 +64,7 @@ header {
 
     25% {
         transform: scale(1.2);
+        opacity: 1;
     }
 
     50% {
@@ -70,6 +73,7 @@ header {
 
     75% {
         transform: scale(1.2);
+        opacity: 1;
     }
 
     100% {

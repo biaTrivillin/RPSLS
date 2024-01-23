@@ -7,7 +7,7 @@ function Header() {
     return (
         <header>
             <div className='logo_container'>
-                <h1><Link to='/'>RPSLS</Link></h1>
+                <Link to='/'>RPSLS</Link>
                 <Link to='/'><img src={logo} alt=''/></Link>
             </div>
             <nav className='nav_container'>

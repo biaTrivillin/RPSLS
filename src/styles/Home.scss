@@ -1,0 +1,9 @@
+@import 'variables-functions';
+
+.title_container {
+    @include flex-center-line;
+
+    img {
+        width: 11rem;
+    }
+}
