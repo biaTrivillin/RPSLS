@@ -1,0 +1,65 @@
+@import 'variables-functions';
+
+.btn {
+    background-color: $header-color;
+    border: none;
+    padding: 0.7rem;
+    color: $text-color;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $hover-color;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0.5rem;
+        @include flex-center-line;
+        opacity: 0;
+    }
+
+    &::after {
+        content: 'bla';
+        position: absolute;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0.5rem;
+        @include flex-center-line;
+        opacity: 0;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        animation: is-bouncing 1s ease-in-out infinite backwards;
+    }
+}
+
+@keyframes is-bouncing {
+    50% {
+        transform: translateY(0.2rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(360deg);
+    }
+}
+

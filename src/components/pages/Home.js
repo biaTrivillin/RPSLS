@@ -20,7 +20,7 @@ function Home() {
                     <img src={SpockHand} alt=""/>
                 </div>
 
-                <Button cta='KNOW MORE'/>
+                <Button className='home_btn' cta='KNOW MORE'/>
             </section>
 
             <section className='know_more_content'>

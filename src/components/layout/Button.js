@@ -1,6 +1,8 @@
+import '../../styles/Button.css'
+
 function Button(props) {
     return (
-        <button>{props.cta}</button>
+        <button className='btn'>{props.cta}</button>
     )
 }
 
