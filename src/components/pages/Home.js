@@ -3,6 +3,13 @@ import Header from '../layout/Header'
 import Footer from '../layout/Footer'
 import '../../styles/Home.css'
 import SpockHand from '../../imgs/spock-hand.png'
+import logo from '../../imgs/logo.png'
+import arrows from '../../imgs/arrows.png'
+import BordRockHand from '../../imgs/bord-rock-hand.png'
+import BordPaperHand from '../../imgs/bord-paper-hand.png'
+import BordScissorsHand from '../../imgs/bord-scissors-hand.png'
+import BordLizardHand from '../../imgs/bord-lizard-hand.png'
+import BordSpockHand from '../../imgs/bord-spock-hand.png'
 
 function Home() {
     return (
@@ -28,14 +35,21 @@ function Home() {
                     <article>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quam rhoncus fringilla consectetur. Aenean dapibus neque vel leo viverra, et consectetur turpis placerat. 
                     </article>
-                    <img src='' alt=''/>
+                    <img src={logo} alt=''/>
                 </div>
 
                 <div className="game_rules">
                     <article>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quam rhoncus fringilla consectetur. Aenean dapibus neque vel leo viverra, et consectetur turpis placerat. 
                     </article>
-                    <img src='' alt=''/>
+                    <div className="rules_img_container">
+                        <img className="arrow_img" src={arrows} alt=''/>
+                        <img className="hand_img" src={BordRockHand} alt=''/>
+                        <img className="hand_img" src={BordPaperHand} alt=''/>
+                        <img className="hand_img" src={BordScissorsHand} alt=''/>
+                        <img className="hand_img" src={BordLizardHand} alt=''/>
+                        <img className="hand_img" src={BordSpockHand} alt=''/>
+                    </div>
                 </div>
 
                 <Button cta='PLAY GAME'/>

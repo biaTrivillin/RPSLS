@@ -74,6 +74,53 @@
   margin: 0 2.5rem 6rem 2.5rem;
   padding: 2.5rem;
   border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.game_history_content img {
+  width: 15rem;
+  animation: rotate 10s ease-in-out infinite reverse forwards;
+}
+.game_history_content img::after {
+  content: "de";
+  height: 1rem;
+  width: 1rem;
+  background-color: #003E43;
+}
+
+.rules_img_container {
+  position: relative;
+  width: 19rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 15s ease-in-out infinite forwards;
+}
+.rules_img_container img:nth-child(2) {
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.rules_img_container img:nth-child(3) {
+  top: 4.6rem;
+  right: 0;
+}
+.rules_img_container img:nth-child(4) {
+  right: 2rem;
+  bottom: 1.5rem;
+}
+.rules_img_container img:nth-child(5) {
+  left: 2rem;
+  bottom: 1.5rem;
+}
+.rules_img_container img:nth-child(6) {
+  top: 4.6rem;
+  left: 0;
 }
 
 .game_rules {
@@ -81,4 +128,25 @@
   padding: 2.5rem;
   border-radius: 0.8rem;
   margin: 0 2.5rem 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hand_img {
+  position: absolute;
+  width: 7rem;
+  animation: rotate 15s ease-in-out infinite reverse forwards;
+}
+
+.arrow_img {
+  width: 12rem;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=Home.css.map */

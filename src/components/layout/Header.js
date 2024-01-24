@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'
 import '../../styles/Header.css'
-import logo from '../../imgs/logo.png'
 
 function Header() {
 
@@ -8,7 +7,6 @@ function Header() {
         <header>
             <div className='logo_container'>
                 <Link to='/'>RPSLS</Link>
-                {/* <Link to='/'><img src={logo} alt=''/></Link> */}
             </div>
             <nav className='nav_container'>
                 <ul>
