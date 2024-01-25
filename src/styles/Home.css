@@ -49,6 +49,19 @@
   bottom: 0;
   left: 0;
 }
+.title_content::before {
+  content: "";
+  width: 11rem;
+  height: 100%;
+  background-color: #003E43;
+  position: absolute;
+  top: 0;
+  left: -11rem;
+  z-index: 1;
+}
+.title_content h1 {
+  animation: slide-in 1.5s ease-in 1 forwards;
+}
 .title_content h1:hover {
   color: #A6281C;
   cursor: default;
@@ -83,12 +96,6 @@
 .game_history_content img {
   width: 15rem;
   animation: rotate 10s ease-in-out infinite reverse forwards;
-}
-.game_history_content img::after {
-  content: "de";
-  height: 1rem;
-  width: 1rem;
-  background-color: #003E43;
 }
 
 .rules_img_container {
@@ -148,5 +155,15 @@
 @keyframes rotate {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-11rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
   }
 }/*# sourceMappingURL=Home.css.map */

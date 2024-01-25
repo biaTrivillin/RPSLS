@@ -34,6 +34,8 @@
         height: 0.1rem;
         top: 0;
     }
+
+    
 }
 
 .title_content {
@@ -49,12 +51,27 @@
         left: 0;
     }
 
+    &::before {
+        content: "";
+        width: 11rem;
+        height: 100%;
+        background-color: $background-color;
+        position: absolute;
+        top: 0;
+        left: -11rem;
+        z-index: 1;
+    }
+
     h1 {
+
+        // transform: translateX(-11rem);
+        animation: slide-in 1.5s ease-in 1 forwards;
         
         &:hover {
             color: $hover-color;
             cursor: default;
         }
+
     }
 }
 
@@ -83,13 +100,6 @@
     img {
         width: 15rem;
         animation: rotate 10s ease-in-out infinite reverse forwards;
-
-        &::after {
-            content: 'de';
-            height: 1rem;
-            width: 1rem;
-            background-color: $background-color;
-        }
 
     }
 }
@@ -152,5 +162,18 @@
 @keyframes rotate {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes slide-in {
+
+    from {
+        transform: translateX(-11rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0rem);
+        opacity: 1;
     }
 }
