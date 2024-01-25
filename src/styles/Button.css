@@ -2,7 +2,7 @@
 .btn {
   background-color: #065856;
   border: none;
-  padding: 0.7rem;
+  padding: 0.8rem;
   color: #D9D9D9;
   border-radius: 0.5rem;
   font-size: 1.5rem;
@@ -25,7 +25,7 @@
   opacity: 0;
 }
 .btn::after {
-  content: "bla";
+  content: "";
   position: absolute;
   background-color: transparent;
   width: 100%;
@@ -37,21 +37,44 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: center;
 }
 .btn:hover::before {
   opacity: 1;
 }
-.btn:hover::after {
+
+#know_more_btn::after {
+  background-image: url(../imgs/arrow-down-solid.svg);
+}
+#know_more_btn:hover::after {
   opacity: 1;
   animation: is-bouncing 1s ease-in-out infinite backwards;
 }
 
+#game_btn::after {
+  background-image: url(../imgs/play-solid.svg);
+}
+#game_btn:hover::after {
+  opacity: 1;
+}
+#game_btn:active::after {
+  transform: scale(0.8);
+}
+
 @keyframes is-bouncing {
   50% {
-    transform: translateY(0.2rem);
+    transform: translateY(0.3rem);
   }
   100% {
     transform: translateY(0rem);
+  }
+}
+@keyframes is-gone {
+  to {
+    transform: translateY(4rem);
+    opacity: 0;
   }
 }
 @keyframes is-rotating {

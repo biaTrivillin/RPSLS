@@ -27,7 +27,7 @@ function Home() {
                     <img src={SpockHand} alt=""/>
                 </div>
 
-                <Button cta='KNOW MORE'/>
+                <Button cta='KNOW MORE' id='know_more_btn'/>
             </section>
 
             <section className='know_more_content'>
@@ -52,7 +52,7 @@ function Home() {
                     </div>
                 </div>
 
-                <Button cta='PLAY GAME'/>
+                <Button cta='PLAY GAME' id='game_btn'/>
             </section>
             <Footer/>
         </div>

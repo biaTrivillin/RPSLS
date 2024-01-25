@@ -2,7 +2,7 @@ import '../../styles/Button.css'
 
 function Button(props) {
     return (
-        <button className='btn'>{props.cta}</button>
+        <button className='btn' id={props.id}>{props.cta}</button>
     )
 }
 
