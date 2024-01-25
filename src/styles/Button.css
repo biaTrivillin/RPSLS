@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Mono:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Mono:wght@500;600;700&display=swap");
 .btn {
   background-color: #065856;
   border: none;
@@ -61,6 +61,14 @@
 }
 #game_btn:active::after {
   transform: scale(0.8);
+}
+
+#play_again_btn::after {
+  background-image: url(../imgs/rotate-right-solid.svg);
+}
+#play_again_btn:hover::after {
+  opacity: 1;
+  animation: is-rotating 1s ease-in-out infinite backwards;
 }
 
 @keyframes is-bouncing {

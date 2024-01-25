@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 5rem 0 5rem 0;
+  margin: 5rem 0 8rem 0;
 }
 .selector_container img {
   width: 6rem;
@@ -67,7 +67,6 @@
   flex-direction: column;
   gap: 2rem;
   margin: 3rem 0 4rem 0;
-  display: none;
 }
 .warning_container h1 {
   font-size: 2rem;

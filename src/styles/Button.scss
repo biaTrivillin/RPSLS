@@ -74,6 +74,18 @@
 
 }
 
+#play_again_btn {
+    &::after {
+        background-image: url(../imgs/rotate-right-solid.svg);
+    }
+
+    &:hover::after {
+        opacity: 1;
+        animation: is-rotating 1s ease-in-out infinite backwards;
+    }
+
+}
+
 
 @keyframes is-bouncing {
     50% {

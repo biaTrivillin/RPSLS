@@ -60,7 +60,7 @@
 
     @include flex-center-line;
     flex-wrap: wrap;
-    margin: 5rem 0 5rem 0;
+    margin: 5rem 0 8rem 0;
     // display: none;
 
     img {
@@ -72,7 +72,7 @@
     @include flex-center-column;
     gap: 2rem;
     margin: 3rem 0 4rem 0;
-    display: none;
+    // display: none;
 
     h1 {
         font-size: 2rem;
