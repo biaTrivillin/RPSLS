@@ -66,6 +66,60 @@
   color: #A6281C;
   cursor: default;
 }
+.title_content h1:nth-child(1)::after {
+  background-image: url(../imgs/rock-hand.png);
+  height: 18rem;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 11rem;
+  right: -13rem;
+  background-color: #003E43;
+  opacity: 0;
+}
+.title_content h1:nth-child(2)::after {
+  background-image: url(../imgs/paper-hand.png);
+  height: 18rem;
+  top: -3rem;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 11rem;
+  right: -13rem;
+  background-color: #003E43;
+  opacity: 0;
+}
+.title_content h1:nth-child(3)::after {
+  background-image: url(../imgs/scissors-hand.png);
+  height: 18rem;
+  top: -5rem;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 11rem;
+  right: -13rem;
+  background-color: #003E43;
+  opacity: 0;
+}
+.title_content h1:nth-child(4)::after {
+  background-image: url(../imgs/lizard-hand.png);
+  height: 18rem;
+  top: -8rem;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 11rem;
+  right: -13rem;
+  background-color: #003E43;
+  opacity: 0;
+}
+.title_content h1:hover::after {
+  opacity: 1;
+}
 
 .know_more_content {
   display: flex;

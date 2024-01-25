@@ -22,4 +22,15 @@ $secundray-font: 'Lato', sans-serif;
     justify-content: center;
 }
 
+@mixin after-hand-hover {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 11rem;
+    right: -13rem;
+    background-color: $background-color;
+    opacity: 0;
+}
+
 

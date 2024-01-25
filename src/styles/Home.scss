@@ -64,12 +64,42 @@
 
     h1 {
 
-        // transform: translateX(-11rem);
         animation: slide-in 1.5s ease-in 1 forwards;
         
         &:hover {
             color: $hover-color;
             cursor: default;
+        }
+
+        &:nth-child(1)::after {
+            background-image: url(../imgs/rock-hand.png);
+            height: 18rem;
+            @include after-hand-hover;
+        }
+
+        &:nth-child(2)::after {
+            background-image: url(../imgs/paper-hand.png);
+            height: 18rem;
+            top: -3rem;
+            @include after-hand-hover;
+        }
+
+        &:nth-child(3)::after {
+            background-image: url(../imgs/scissors-hand.png);
+            height: 18rem;
+            top: -5rem;
+            @include after-hand-hover;
+        }
+
+        &:nth-child(4)::after {
+            background-image: url(../imgs/lizard-hand.png);
+            height: 18rem;
+            top: -8rem;
+            @include after-hand-hover;
+        }
+
+        &:hover::after {
+            opacity: 1;
         }
 
     }
@@ -158,6 +188,10 @@
 .arrow_img {
     width: 12rem;
 }
+
+
+
+
 
 @keyframes rotate {
     to {
