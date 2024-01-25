@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Mono:wght@500;600;700&display=swap");
+.warning_title_container h1 {
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2.5rem;
+  opacity: 0;
+}
+
+.game_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.game_content {
+  width: 27rem;
+  height: 18rem;
+  border-radius: 0.8rem;
+  background-color: #577C7F;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 75%;
+}
+.game_content h1 {
+  font-size: 2rem;
+  align-self: flex-end;
+  justify-self: center;
+}
+.game_content img {
+  width: 8rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.game_content div {
+  margin: 2rem;
+  position: relative;
+  height: 9.2rem;
+  width: 9.2rem;
+  background-color: #003E43;
+  border-radius: 50%;
+}
+.game_content div:nth-child(3) {
+  transform: rotate(60deg);
+}
+.game_content div:nth-child(4) {
+  transform: rotate(-120deg);
+}
+
+.selector_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5rem 0 5rem 0;
+}
+.selector_container img {
+  width: 6rem;
+}
+
+.warning_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem 0 4rem 0;
+  display: none;
+}
+.warning_container h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.warning_container p {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+}/*# sourceMappingURL=Game.css.map */
