@@ -15,34 +15,36 @@ function Game() {
     return (
         <div className="content">
             <Header/>
-            <section className="warning_title_container">
-                <GameWarningTitle title='BAZINGA!'/>
-            </section>
-            <section className="game_container">
-                <div className="game_content">
-                    <h1>YOU</h1>
-                    <h1>COMPUTER</h1>
-                    <div>
-                        <img src={RockHand} alt=""/>
+            <div className="content_presentation">
+                <section className="warning_title_container">
+                    <GameWarningTitle title='BAZINGA!'/>
+                </section>
+                <section className="game_container">
+                    <div className="game_content">
+                        <h1>YOU</h1>
+                        <h1>COMPUTER</h1>
+                        <div>
+                            <img src={RockHand} alt=""/>
+                        </div>
+                        <div>
+                            <img src={RockHand} alt=""/>
+                        </div>
                     </div>
-                    <div>
-                        <img src={RockHand} alt=""/>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <section className="selector_container">
-                <img src={BordRockHand} alt=""/>
-                <img src={BordPaperHand} alt=""/>
-                <img src={BordScissorsHand} alt=""/>
-                <img src={BordLizardHand} alt=""/>
-                <img src={BordSpockHand} alt=""/>
-            </section>
+                <section className="selector_container">
+                    <img src={BordRockHand} alt=""/>
+                    <img src={BordPaperHand} alt=""/>
+                    <img src={BordScissorsHand} alt=""/>
+                    <img src={BordLizardHand} alt=""/>
+                    <img src={BordSpockHand} alt=""/>
+                </section>
 
-            <section className="warning_container">
-                <GameWarning title='WON' description='ipsum lorem dolor sit amat '/>
-                <Button cta='PLAY AGAIN' id='play_again_btn'/>
-            </section>   
+                <section className="warning_container">
+                    <GameWarning title='WON' description='ipsum lorem dolor sit amat '/>
+                    <Button cta='PLAY AGAIN' id='play_again_btn'/>
+                </section>
+            </div>   
             <Footer/>
         </div>
     )
