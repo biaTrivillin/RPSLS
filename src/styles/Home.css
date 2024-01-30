@@ -1,18 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Mono:wght@500;600;700&display=swap");
-@media (min-width: 720px) {
-  * {
-    font-size: 70%;
-  }
-}
-@media (min-width: 1000px) {
-  * {
-    font-size: 80%;
-  }
-  .title_container {
-    width: 25rem;
-    height: 17rem;
-  }
-}
 .presentation_content {
   display: flex;
   align-items: center;
@@ -80,69 +66,36 @@
   color: #A6281C;
   cursor: default;
 }
-.title_content h1:nth-child(1)::after {
-  background-image: url(../imgs/rock-hand.png);
-  height: 18rem;
+.title_content h1::after {
   content: "";
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   width: 10rem;
+  height: 15rem;
   right: -12rem;
   background-color: #003E43;
   opacity: 0;
+}
+.title_content h1:nth-child(1)::after {
+  background-image: url(../imgs/rock-hand.png);
 }
 .title_content h1:nth-child(2)::after {
   background-image: url(../imgs/paper-hand.png);
-  height: 18rem;
   top: -3rem;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 10rem;
-  right: -12rem;
-  background-color: #003E43;
-  opacity: 0;
 }
 .title_content h1:nth-child(3)::after {
   background-image: url(../imgs/scissors-hand.png);
-  height: 18rem;
   top: -5rem;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 10rem;
-  right: -12rem;
-  background-color: #003E43;
-  opacity: 0;
 }
 .title_content h1:nth-child(4)::after {
   background-image: url(../imgs/lizard-hand.png);
-  height: 18rem;
-  top: -7rem;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 10rem;
-  right: -12rem;
-  background-color: #003E43;
-  opacity: 0;
+  top: -8rem;
 }
 .title_content h1:nth-child(5)::after {
   background-image: url(../imgs/spock-hand.png);
-  height: 18rem;
-  top: -10rem;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 10rem;
-  right: -12rem;
-  background-color: #003E43;
-  opacity: 0;
+  top: -11rem;
 }
 .title_content h1:hover::after {
   opacity: 1;

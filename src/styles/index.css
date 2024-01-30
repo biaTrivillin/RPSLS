@@ -29,4 +29,15 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #065856;
+}
+
+@media (min-width: 720px) {
+  * {
+    font-size: 70%;
+  }
+}
+@media (min-width: 1000px) {
+  * {
+    font-size: 80%;
+  }
 }/*# sourceMappingURL=index.css.map */
