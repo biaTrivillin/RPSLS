@@ -8,6 +8,7 @@ header {
     padding: 1.5rem 2rem 0.3rem 2rem;
     background-color: $header-color;
     height: 6.5rem;
+    animation: appear 2s ease-in-out 1 forwards;
     
     a{
         text-decoration: none;

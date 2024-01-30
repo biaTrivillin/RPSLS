@@ -33,6 +33,20 @@
     opacity: 1;
   }
 }
+@keyframes appear-pop {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes pop-two {
   0% {
     transform: scale(1);
@@ -56,6 +70,14 @@
   to {
     transform: translateY(4rem);
     opacity: 0;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .btn {
@@ -104,6 +126,10 @@
   opacity: 1;
 }
 
+#know_more_btn {
+  opacity: 0;
+  animation: appear-pop 1s 1 2.5s forwards;
+}
 #know_more_btn::after {
   background-image: url(../imgs/arrow-down-solid.svg);
 }
@@ -122,6 +148,10 @@
   transform: scale(0.8);
 }
 
+#play_again_btn {
+  animation: appear-pop 0.5s 1s 1 forwards;
+  opacity: 0;
+}
 #play_again_btn::after {
   background-image: url(../imgs/rotate-right-solid.svg);
 }

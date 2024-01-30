@@ -1,10 +1,12 @@
 @import 'variables-functions';
+@import 'animations';
 
 footer {
     background-color: $header-color;
     font-size: 1.5rem;
     padding: 1rem 0;
     margin-top: 10rem;
+    animation: appear 2s ease-in-out 1 forwards;
 
     @include flex-center-column;
 

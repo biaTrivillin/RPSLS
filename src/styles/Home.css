@@ -33,6 +33,20 @@
     opacity: 1;
   }
 }
+@keyframes appear-pop {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes pop-two {
   0% {
     transform: scale(1);
@@ -42,6 +56,28 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes is-bouncing {
+  50% {
+    transform: translateY(0.3rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes is-gone {
+  to {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .presentation_content {
@@ -61,9 +97,12 @@
   position: relative;
   height: 15rem;
   width: 23rem;
+  animation: appear 2s ease-in-out 1 forwards;
 }
 .title_container img {
   width: 10rem;
+  opacity: 0;
+  animation: appear 2s ease-in-out 1s 1 forwards;
 }
 .title_container::before {
   content: "";
@@ -105,7 +144,8 @@
   z-index: 1;
 }
 .title_content h1 {
-  animation: slide-in 1.5s ease-in 1 forwards;
+  animation: slide-in 1.5s ease-in 1s 1 forwards;
+  opacity: 0;
 }
 .title_content h1:hover {
   color: #A6281C;
@@ -122,6 +162,7 @@
   right: -12rem;
   background-color: #003E43;
   opacity: 0;
+  z-index: 1;
 }
 .title_content h1:nth-child(1)::after {
   background-image: url(../imgs/rock-hand.png);
@@ -153,6 +194,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 12rem 0 6rem 0;
+  animation: appear 2s ease-in-out 1 forwards;
   display: none;
 }
 .know_more_content article {

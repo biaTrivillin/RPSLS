@@ -48,6 +48,9 @@
 
 #know_more_btn {
 
+    opacity: 0;
+    animation: appear-pop 1s 1 2.5s forwards;
+
     &::after {
         background-image: url(../imgs/arrow-down-solid.svg);
     }
@@ -76,6 +79,10 @@
 }
 
 #play_again_btn {
+
+    animation: appear-pop 0.5s 1s 1 forwards;
+    opacity: 0;
+
     &::after {
         background-image: url(../imgs/rotate-right-solid.svg);
     }
