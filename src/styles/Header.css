@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Mono:wght@500;600;700&display=swap");
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -50,24 +69,4 @@ header a:hover {
   justify-content: end;
   align-items: end;
   gap: 1.5rem;
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
 }/*# sourceMappingURL=Header.css.map */

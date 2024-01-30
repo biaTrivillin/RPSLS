@@ -1,4 +1,5 @@
 @import 'variables-functions';
+@import 'animations';
 
 header {
     display: grid;
@@ -64,27 +65,4 @@ header {
     }  
 }
 
-@keyframes pop {
-    0% {
-        transform: scale(1);
-    }
-
-    25% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1);
-    }
-
-    75% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
 

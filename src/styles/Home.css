@@ -1,4 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Mono:wght@500;600;700&display=swap");
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-11rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+@keyframes pop-two {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .presentation_content {
   display: flex;
   align-items: center;
@@ -190,32 +235,6 @@
   width: 12rem;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes slide-in {
-  from {
-    transform: translateX(-11rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0rem);
-    opacity: 1;
-  }
-}
-@keyframes pop-two {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @media (min-width: 1000px) {
   .title_container {
     width: 25rem;

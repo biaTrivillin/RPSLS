@@ -1,4 +1,5 @@
 @import 'variables-functions';
+@import 'animations';
 
 .btn {
     background-color: $header-color;
@@ -81,33 +82,9 @@
 
     &:hover::after {
         opacity: 1;
-        animation: is-rotating 1s ease-in-out infinite backwards;
+        animation: rotate 1s ease-in-out infinite backwards;
     }
 
-}
-
-
-@keyframes is-bouncing {
-    50% {
-        transform: translateY(0.3rem);
-    }
-
-    100% {
-        transform: translateY(0rem);
-    }
-}
-
-@keyframes is-gone {
-    to {
-        transform: translateY(4rem);
-        opacity: 0;
-    }
-}
-
-@keyframes is-rotating {
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 @media (min-width: 1000px) {
