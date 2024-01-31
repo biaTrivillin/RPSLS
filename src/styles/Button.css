@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Mono:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Mono:wght@500;600;700&display=swap");
 @keyframes pop {
   0% {
     transform: scale(1);
@@ -136,6 +136,20 @@
 #know_more_btn:hover::after {
   opacity: 1;
   animation: is-bouncing 1s ease-in-out infinite backwards;
+}
+#know_more_btn:active::after {
+  transform: scale(0.5);
+}
+
+.click {
+  cursor: default;
+}
+.click::after {
+  opacity: 1;
+  animation: is-bouncing 1s ease-in-out infinite backwards;
+}
+.click::before {
+  opacity: 1;
 }
 
 #game_btn::after {

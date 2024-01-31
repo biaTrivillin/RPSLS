@@ -47,7 +47,7 @@ function Game() {
 
                 <section className="warning_container">
                     <GameWarning title='WON' elementOne='lagarto' action='come' elementTwo='papel'/>
-                    <Button click={playAgain} cta='PLAY AGAIN' id='play_again_btn'/>
+                    <Button click={playAgain} cta='PLAY AGAIN' class='btn' id='play_again_btn'/>
                 </section>
             </div>   
             <Footer/>

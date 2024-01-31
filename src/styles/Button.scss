@@ -60,6 +60,22 @@
         animation: is-bouncing 1s ease-in-out infinite backwards;
     }
 
+    &:active::after {
+        transform: scale(0.5);
+    }
+}
+
+.click {
+    cursor: default;
+
+    &::after {
+        opacity: 1;
+        animation: is-bouncing 1s ease-in-out infinite backwards;
+    }
+
+    &::before {
+        opacity: 1;
+    }
 }
 
 #game_btn {

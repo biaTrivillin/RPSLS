@@ -11,11 +11,23 @@ import BordScissorsHand from '../../imgs/bord-scissors-hand.png'
 import BordLizardHand from '../../imgs/bord-lizard-hand.png'
 import BordSpockHand from '../../imgs/bord-spock-hand.png'
 
-function Home() {
+import React, { useState } from "react";
 
-    function activateLasers () {
-        console.log('lala')
+function Home() { 
+
+    const [showStyle, setShowStyle] = useState('know_more_content hide');
+    
+    const [showStyleBtn, setShowStyleBtn] = useState('btn show');
+
+    const knowMore = () => {
+
+        if (showStyle !== 'know_more_content show') setShowStyle('know_more_content show');
+        else setShowStyle('know_more_content hide')
+
+        if (showStyleBtn !== 'btn click') setShowStyleBtn('btn click');
+        else setShowStyleBtn('btn')
     }
+
 
     function playGame () {
         window.location.href = '/game'
@@ -36,10 +48,10 @@ function Home() {
                     <img src={SpockHand} alt=""/>
                 </div>
 
-                <Button click={activateLasers} cta='KNOW MORE' id='know_more_btn'/>
+                <Button click={knowMore} cta='KNOW MORE' class={showStyleBtn} id='know_more_btn'/>
             </section>
 
-            <section className='know_more_content'>
+            <section className={showStyle}>
                 <div className="game_history_content">
                     <article>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quam rhoncus fringilla consectetur. Aenean dapibus neque vel leo viverra, et consectetur turpis placerat. 
@@ -61,7 +73,7 @@ function Home() {
                     </div>
                 </div>
 
-                <Button click={playGame} cta='PLAY GAME' id='game_btn'/>
+                <Button click={playGame} cta='PLAY GAME' class='btn' id='game_btn'/>
             </section>
             <Footer/>
         </div>

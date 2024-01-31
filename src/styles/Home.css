@@ -103,6 +103,7 @@
   width: 10rem;
   opacity: 0;
   animation: appear 2s ease-in-out 1s 1 forwards;
+  z-index: -1;
 }
 .title_container::before {
   content: "";
@@ -201,6 +202,14 @@
   font-weight: 700;
   font-size: 1.3rem;
   text-align: justify;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
 
 .game_history_content {
