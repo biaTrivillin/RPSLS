@@ -12,6 +12,15 @@ import BordLizardHand from '../../imgs/bord-lizard-hand.png'
 import BordSpockHand from '../../imgs/bord-spock-hand.png'
 
 function Home() {
+
+    function activateLasers () {
+        console.log('lala')
+    }
+
+    function playGame () {
+        window.location.href = 'http://localhost:3000/game'
+    }
+
     return (
         <div className="content">
             <Header/>
@@ -27,7 +36,7 @@ function Home() {
                     <img src={SpockHand} alt=""/>
                 </div>
 
-                <Button cta='KNOW MORE' id='know_more_btn'/>
+                <Button click={activateLasers} cta='KNOW MORE' id='know_more_btn'/>
             </section>
 
             <section className='know_more_content'>
@@ -52,7 +61,7 @@ function Home() {
                     </div>
                 </div>
 
-                <Button cta='PLAY GAME' id='game_btn'/>
+                <Button click={playGame} cta='PLAY GAME' id='game_btn'/>
             </section>
             <Footer/>
         </div>

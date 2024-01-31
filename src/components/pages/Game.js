@@ -12,6 +12,11 @@ import RockHand from '../../imgs/rock-hand.png'
 import '../../styles/Game.css'
 
 function Game() {
+
+    function playAgain () {
+        window.location.reload();
+    }
+
     return (
         <div className="content">
             <Header/>
@@ -42,7 +47,7 @@ function Game() {
 
                 <section className="warning_container">
                     <GameWarning title='WON' elementOne='lagarto' action='come' elementTwo='papel'/>
-                    <Button cta='PLAY AGAIN' id='play_again_btn'/>
+                    <Button click={playAgain} cta='PLAY AGAIN' id='play_again_btn'/>
                 </section>
             </div>   
             <Footer/>

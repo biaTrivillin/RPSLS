@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Mono:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Mono:wght@500;600;700&display=swap");
 @keyframes pop {
   0% {
     transform: scale(1);
@@ -195,7 +195,6 @@
   flex-direction: column;
   margin: 12rem 0 6rem 0;
   animation: appear 2s ease-in-out 1 forwards;
-  display: none;
 }
 .know_more_content article {
   font-family: "Lato", sans-serif;
