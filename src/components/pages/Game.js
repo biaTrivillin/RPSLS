@@ -22,6 +22,8 @@ function Game() {
 
     const [isItDisabled, setBtnDisabled] = useState(false);
 
+    const [btnStyle, setBtnStyle] = useState('enabled');
+
     const [isThisImg, setImgChoice] = useState(Rock);
 
     const [animationChoice, setAnimationChoice] = useState('none_animation');
@@ -30,6 +32,8 @@ function Game() {
 
         if (isItDisabled !== false) setBtnDisabled(false);
         else setBtnDisabled(true)
+
+        if (btnStyle !== 'disabled') setBtnStyle('disabled');
 
         if (animationChoice !== 'choice_animation') setAnimationChoice('choice_animation');
         else setAnimationChoice('none_animation')
@@ -68,11 +72,11 @@ function Game() {
                 </section>
 
                 <section className="selector_container">
-                    <button onClick={() => userClick('rock', Rock)} disabled={isItDisabled}><img src={BordRockHand} alt="" /></button>
-                    <button onClick={() => userClick('paper', Paper)} disabled={isItDisabled}><img src={BordPaperHand} alt="" /></button>
-                    <button onClick={() => userClick('scissors', Scissors)} disabled={isItDisabled}><img src={BordScissorsHand} alt="" /></button>
-                    <button onClick={() => userClick('lizard', Lizard)} disabled={isItDisabled}><img src={BordLizardHand} alt="" /></button>
-                    <button onClick={() => userClick('spock', Spock)} disabled={isItDisabled}><img src={BordSpockHand} alt="" /></button>
+                    <button onClick={() => userClick('rock', Rock)} disabled={isItDisabled}><img src={BordRockHand} alt="" className={btnStyle}/></button>
+                    <button onClick={() => userClick('paper', Paper)} disabled={isItDisabled}><img src={BordPaperHand} alt="" className={btnStyle}/></button>
+                    <button onClick={() => userClick('scissors', Scissors)} disabled={isItDisabled}><img src={BordScissorsHand} alt="" className={btnStyle}/></button>
+                    <button onClick={() => userClick('lizard', Lizard)} disabled={isItDisabled}><img src={BordLizardHand} alt="" className={btnStyle}/></button>
+                    <button onClick={() => userClick('spock', Spock)} disabled={isItDisabled}><img src={BordSpockHand} alt="" className={btnStyle}/></button>
                 </section>
 
                 <section className="warning_container">
