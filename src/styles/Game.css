@@ -118,8 +118,6 @@
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  opacity: 0;
-  animation: appear-pop 0.5s 1.5s 1 forwards;
 }
 .game_content div {
   margin: 2rem;
@@ -143,25 +141,29 @@
   flex-wrap: wrap;
   margin: 5rem 0 8rem 0;
 }
-.selector_container img {
-  width: 6rem;
-  cursor: pointer;
+.selector_container button {
+  background-color: transparent;
+  border: none;
   opacity: 0;
+  cursor: pointer;
 }
-.selector_container img:nth-child(1) {
+.selector_container button:nth-child(1) {
   animation: appear-pop 0.5s 1.5s 1 forwards;
 }
-.selector_container img:nth-child(2) {
+.selector_container button:nth-child(2) {
   animation: appear-pop 0.5s 1.7s 1 forwards;
 }
-.selector_container img:nth-child(3) {
+.selector_container button:nth-child(3) {
   animation: appear-pop 0.5s 1.9s 1 forwards;
 }
-.selector_container img:nth-child(4) {
+.selector_container button:nth-child(4) {
   animation: appear-pop 0.5s 2.1s 1 forwards;
 }
-.selector_container img:nth-child(5) {
+.selector_container button:nth-child(5) {
   animation: appear-pop 0.5s 2.3s 1 forwards;
+}
+.selector_container img {
+  width: 6rem;
 }
 
 .warning_container {
@@ -223,5 +225,40 @@
   }
   .selector_container img {
     width: 7rem;
+  }
+}
+.none_animation {
+  opacity: 0;
+  animation: appear-pop 0.5s 1.5s 1 forwards;
+}
+
+.choice_animation {
+  animation: appear-pop 0.5s 1.5s 1 forwards, fade-out 1s ease-in-out 1 forwards, reveal-choice 1s ease-in 1s 1 forwards;
+}
+
+@keyframes reveal-choice {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=Game.css.map */

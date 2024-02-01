@@ -28,7 +28,6 @@ function Home() {
         else setShowStyleBtn('btn')
     }
 
-
     function playGame () {
         window.location.href = '/game'
     }
