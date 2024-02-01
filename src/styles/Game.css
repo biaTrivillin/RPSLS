@@ -265,6 +265,12 @@
 .enabled {
   opacity: 1;
 }
+.enabled:hover {
+  transform: scale(1.2);
+}
+.enabled:active {
+  transform: scale(0.9);
+}
 
 .disabled {
   opacity: 0.5;
