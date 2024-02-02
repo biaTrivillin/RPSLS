@@ -28,7 +28,11 @@ function Game() {
 
     const [animationChoice, setAnimationChoice] = useState('none_animation');
 
-    const userClick = (choice, choiceImg) => {
+    const [gameMessage, setgameMessage] = useState('MAKE YOUR CHOICE');
+
+    const [computerImg, setComputerImg] = useState(Rock);
+
+    const userClick = (userChoice, choiceImg) => {
 
         if (isItDisabled !== false) setBtnDisabled(false);
         else setBtnDisabled(true)
@@ -42,10 +46,41 @@ function Game() {
             if (isThisImg !== choiceImg) setImgChoice(choiceImg);
         }, 1000);
 
-        console.log(choice)
+        console.log(userChoice)
         console.log(choiceImg)
         console.log(isThisImg)
+
+        const optionsArray = ['rock', 'paper', 'scissors', 'lizard', 'spock']
+
+        const imgsArray = [Rock, Paper, Scissors, Lizard, Spock]
+
+        const choiceIndex = Math.floor(Math.random() * 4) ;
+
+        const computerChoice = optionsArray[choiceIndex] 
+
+        const computerChoiceImg = imgsArray[choiceIndex]
+
+        if (computerImg !== computerChoiceImg) setComputerImg(computerChoiceImg);
+        else setComputerImg(Rock)
+
+        console.log(computerChoice)
+
+        let isThisAWin = false
+
+        console.log(isThisAWin)
+
+        if(
+            (userChoice === 'scissors' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'scissors') || (userChoice === 'scissors' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'scissors')) {
+            isThisAWin = true
+        }
+
+        if (isThisAWin === true && gameMessage !== "BAZINGA!") setgameMessage("BAZINGA!");
+            else setgameMessage('WHAT A SHAME!')
+
+        if (isThisAWin === false && userChoice === computerChoice) setgameMessage("IT' A TIE!");
+
     }
+
 
     function playAgain () {
         window.location.reload();
@@ -56,7 +91,7 @@ function Game() {
             <Header/>
             <div className="content_presentation">
                 <section className="warning_title_container">
-                    <GameWarningTitle title='BAZINGA!'/>
+                    <GameWarningTitle title={gameMessage}/>
                 </section>
                 <section className="game_container">
                     <div className="game_content">
@@ -66,7 +101,7 @@ function Game() {
                             <img className={animationChoice} src={isThisImg} alt=""/>
                         </div>
                         <div>
-                            <img className={animationChoice} src={Rock} alt=""/>
+                            <img className={animationChoice} src={computerImg} alt=""/>
                         </div>
                     </div>
                 </section>

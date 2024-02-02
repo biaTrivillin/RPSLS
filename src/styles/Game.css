@@ -85,6 +85,7 @@
   padding-top: 4rem;
   font-size: 2.5rem;
   opacity: 0;
+  animation: appear-pop 0.5s 1.5s 1 forwards;
 }
 
 .game_container {
@@ -241,7 +242,7 @@
     opacity: 0;
   }
   50% {
-    opacity: 1;
+    opacity: 0.5;
     transform: translateY(1rem);
     transform: translateX(1rem);
   }
