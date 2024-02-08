@@ -53,14 +53,14 @@ function Home() {
             <section className={showStyle}>
                 <div className="game_history_content">
                     <article>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quam rhoncus fringilla consectetur. Aenean dapibus neque vel leo viverra, et consectetur turpis placerat. 
+                        Have you ever heard of the game Rock-paper-scissors-lizard-Spock? It's like the classic game, but with two additional weapons! Created by Sam Kass and Karen Bryla, it received Sheldon Cooper's seal of approval for resolving any kind of dispute and gained even more popularity thanks to the TV series "The Big Bang Theory".
                     </article>
                     <img src={logo} alt=''/>
                 </div>
 
                 <div className="game_rules">
                     <article>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum quam rhoncus fringilla consectetur. Aenean dapibus neque vel leo viverra, et consectetur turpis placerat. 
+                        According to Sheldon Cooper, the game is very simple: "Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock, and (as it always has) Rock crushes Scissors."
                     </article>
                     <div className="rules_img_container">
                         <img className="arrow_img" src={arrows} alt=''/>

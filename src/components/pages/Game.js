@@ -24,6 +24,10 @@ function Game() {
 
     const [btnStyle, setBtnStyle] = useState('enabled');
 
+    const [showStyleSelector, setShowStyleSelector] = useState('selector_container');
+
+    const [showStyleWarning, setShowStyleWarning] = useState('warning_container');
+
     const [isThisImg, setImgChoice] = useState(Rock);
 
     const [animationChoice, setAnimationChoice] = useState('none_animation');
@@ -32,7 +36,16 @@ function Game() {
 
     const [computerImg, setComputerImg] = useState(Rock);
 
+    const [gameWarningTitle, setGameWarningTitle] = useState("IT'S A TIE");
+
+    const [elementOneText, setElementOneText] = useState("rock");
+
+    const [elementTwoText, setElementTwoText] = useState("rock");
+
+    const [elementAction, setElementAction] = useState("wins");
+
     const userClick = (userChoice, choiceImg) => {
+        
 
         if (isItDisabled !== false) setBtnDisabled(false);
         else setBtnDisabled(true)
@@ -44,11 +57,45 @@ function Game() {
 
         setInterval(() => {
             if (isThisImg !== choiceImg) setImgChoice(choiceImg);
-        }, 1000);
 
-        console.log(userChoice)
-        console.log(choiceImg)
-        console.log(isThisImg)
+            if (computerImg !== computerChoiceImg) setComputerImg(computerChoiceImg);
+
+            if (isThisAWin === true && gameMessage !== "BAZINGA!") {
+                setgameMessage("BAZINGA!");
+
+                setGameWarningTitle("YOU WON")
+
+                setElementOneText(userChoice)
+
+                setElementTwoText(computerChoice)
+
+            } else {
+                
+                setElementOneText(computerChoice)
+
+                setElementTwoText(userChoice)
+
+                setgameMessage('WHAT A SHAME!')
+
+                setGameWarningTitle('YOU LOST')
+            }
+            
+            if (isThisAWin === false && userChoice === computerChoice) {
+                setgameMessage("YOU STILL A LOSER!");
+
+                setGameWarningTitle("IT'S A TIE")
+
+                setElementAction('ties with')
+
+            }
+
+            if (showStyleSelector !== 'selector_container hide') setShowStyleSelector('selector_container hide');
+            else setShowStyleSelector('selector_container')
+
+            if (showStyleWarning !== 'warning_container show') setShowStyleWarning('warning_container show');
+            else setShowStyleWarning('warning_container')
+
+        }, 1000);
 
         const optionsArray = ['rock', 'paper', 'scissors', 'lizard', 'spock']
 
@@ -60,24 +107,35 @@ function Game() {
 
         const computerChoiceImg = imgsArray[choiceIndex]
 
-        if (computerImg !== computerChoiceImg) setComputerImg(computerChoiceImg);
-        else setComputerImg(Rock)
+        let isTheWinner = 'rock'
 
-        console.log(computerChoice)
+        let isTheLoser = 'rock'
 
         let isThisAWin = false
 
-        console.log(isThisAWin)
-
         if(
-            (userChoice === 'scissors' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'scissors') || (userChoice === 'scissors' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'scissors')) {
-            isThisAWin = true
+            (userChoice === 'scissors' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'scissors') || (userChoice === 'scissors' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'scissors')
+        ) isThisAWin = true
+
+        if (isThisAWin === true) {
+            isTheWinner = userChoice
+            isTheLoser = computerChoice
+        }
+        else {
+            isTheWinner = computerChoice
+            isTheLoser = userChoice
         }
 
-        if (isThisAWin === true && gameMessage !== "BAZINGA!") setgameMessage("BAZINGA!");
-            else setgameMessage('WHAT A SHAME!')
-
-        if (isThisAWin === false && userChoice === computerChoice) setgameMessage("IT' A TIE!");
+        if ((isTheWinner === 'scissors') && (isTheLoser === 'paper')) setElementAction('cuts')
+        if ((isTheWinner === 'paper') && (isTheLoser === 'rock')) setElementAction('covers')
+        if ((isTheWinner === 'rock') && (isTheLoser === 'lizard')) setElementAction('crushes')
+        if ((isTheWinner === 'lizard') && (isTheLoser === 'spock')) setElementAction('poisons')
+        if ((isTheWinner === 'spock') && (isTheLoser === 'scissors')) setElementAction('smashes')
+        if ((isTheWinner === 'scissors') && (isTheLoser === 'lizard')) setElementAction('decapitates')
+        if ((isTheWinner === 'lizard') && (isTheLoser === 'paper')) setElementAction('eats')
+        if ((isTheWinner === 'paper') && (isTheLoser === 'spock')) setElementAction('disproves')
+        if ((isTheWinner === 'spock') && (isTheLoser === 'rock')) setElementAction('vaporizes')
+        if ((isTheWinner === 'rock') && (isTheLoser === 'scissors')) setElementAction('crushes')
 
     }
 
@@ -106,7 +164,7 @@ function Game() {
                     </div>
                 </section>
 
-                <section className="selector_container">
+                <section className={showStyleSelector}>
                     <button onClick={() => userClick('rock', Rock)} disabled={isItDisabled}><img src={BordRockHand} alt="" className={btnStyle}/></button>
                     <button onClick={() => userClick('paper', Paper)} disabled={isItDisabled}><img src={BordPaperHand} alt="" className={btnStyle}/></button>
                     <button onClick={() => userClick('scissors', Scissors)} disabled={isItDisabled}><img src={BordScissorsHand} alt="" className={btnStyle}/></button>
@@ -114,8 +172,8 @@ function Game() {
                     <button onClick={() => userClick('spock', Spock)} disabled={isItDisabled}><img src={BordSpockHand} alt="" className={btnStyle}/></button>
                 </section>
 
-                <section className="warning_container">
-                    <GameWarning title='WON' elementOne='lagarto' action='come' elementTwo='papel'/>
+                <section className={showStyleWarning}>
+                    <GameWarning title={gameWarningTitle} elementOne={elementOneText} action={elementAction} elementTwo={elementTwoText}/>
                     <Button click={playAgain} cta='PLAY AGAIN' class='btn' id='play_again_btn'/>
                 </section>
             </div>   

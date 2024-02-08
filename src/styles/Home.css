@@ -86,7 +86,8 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 8rem;
-  margin-top: 10rem;
+  margin-top: 12rem;
+  padding-bottom: 4rem;
 }
 
 .title_container {
@@ -170,7 +171,7 @@
 }
 .title_content h1:nth-child(2)::after {
   background-image: url(../imgs/paper-hand.png);
-  top: -3rem;
+  top: -2rem;
 }
 .title_content h1:nth-child(3)::after {
   background-image: url(../imgs/scissors-hand.png);
@@ -182,7 +183,7 @@
 }
 .title_content h1:nth-child(5)::after {
   background-image: url(../imgs/spock-hand.png);
-  top: -11rem;
+  top: -12rem;
 }
 .title_content h1:hover::after {
   opacity: 1;
@@ -299,10 +300,12 @@
     margin-right: 6rem;
   }
   .game_history_content article {
-    font-size: 2.3rem;
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
   .game_history_content img {
     justify-self: center;
+    width: 20rem;
   }
   .game_rules {
     display: grid;
@@ -312,9 +315,11 @@
     margin-right: 6rem;
   }
   .game_rules article {
-    font-size: 2.3rem;
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
   .game_rules div {
     justify-self: center;
+    width: 20rem;
   }
 }/*# sourceMappingURL=Home.css.map */
