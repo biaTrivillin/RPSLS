@@ -38,13 +38,13 @@ More organized and faster styling, using mixins to make the code more concise an
 The project's design was developed with a **mobile-first** approach, enabling the creation of a responsive page with minimal interventions through media queries.
 
 <div align="center">
-  <img align="center" src="public/responsive.gif" width="700px">
+  <img align="center" src="public/responsive.gif" width="500px">
 </div> <br><br>
 
 ### Animations
 The project features **animations and hover events**, enhancing the creation of a dynamic, interactive, and intuitive interface.
 <div align="center">
-  <img align="center" src="public/animations.gif" width="700px">
+  <img align="center" src="public/animations.gif" width="500px">
 </div> <br><br>
 
 
