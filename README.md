@@ -3,7 +3,7 @@
 
 ## Preview
 <div align="center">
-  <img align="center" src="assets/preview.gif" width="700px">
+  <img align="center" src="src/imgs/preview.gif" width="700px">
 </div> <br>
 
 ## Stacks used in the project
