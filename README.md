@@ -22,33 +22,33 @@
 </div>
 <br>
 
+## Deploy
+The project was deployed using the Vercel platform and is available at the [link](https://rpsls-beige.vercel.app/)
+<br><br>
+
 ## Features and Details
 
-
-### ReactJS
+### ⚛️ ReactJS
 The project was created with **ReactJS**, streamlining the development process and ensuring a more organized and dynamic code.<br><br>
 
-### React Router
+### 🛣️ React Router
 The **React Router** was used to create and manipulate the application's routes.<br><br>
 
-### Sass 
+### 🖌️ Sass 
 More organized and faster styling, using mixins to make the code more concise and dynamic.<br><br>
 
-### Mobile First
+### 📲 Mobile First
 The project's design was developed with a **mobile-first** approach, enabling the creation of a responsive page with minimal interventions through media queries.
 
 <div align="center">
   <img align="center" src="public/responsive.gif" width="500px">
 </div> <br><br>
 
-### Animations
+### 🏃🏼‍♀️Animations
 The project features **animations and hover events**, enhancing the creation of a dynamic, interactive, and intuitive interface.
 <div align="center">
   <img align="center" src="public/animations.gif" width="500px">
 </div> <br><br>
-
-
-
 
 ## Running the aplication:
 
