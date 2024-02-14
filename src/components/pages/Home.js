@@ -1,15 +1,18 @@
-import Button from "../layout/Button"
-import Header from '../layout/Header'
-import Footer from '../layout/Footer'
-import '../../styles/Home.css'
-import SpockHand from '../../imgs/spock-hand.png'
-import logo from '../../imgs/logo.png'
-import arrows from '../../imgs/arrows.png'
-import BordRockHand from '../../imgs/bord-rock-hand.png'
-import BordPaperHand from '../../imgs/bord-paper-hand.png'
-import BordScissorsHand from '../../imgs/bord-scissors-hand.png'
-import BordLizardHand from '../../imgs/bord-lizard-hand.png'
-import BordSpockHand from '../../imgs/bord-spock-hand.png'
+import Button from '../layout/Button';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';
+
+import '../../styles/Home.css';
+
+import logo from '../../imgs/logo.png';
+import arrows from '../../imgs/arrows.png';
+
+import SpockHand from '../../imgs/spock-hand.png';
+import BordRockHand from '../../imgs/bord-rock-hand.png';
+import BordPaperHand from '../../imgs/bord-paper-hand.png';
+import BordScissorsHand from '../../imgs/bord-scissors-hand.png';
+import BordLizardHand from '../../imgs/bord-lizard-hand.png';
+import BordSpockHand from '../../imgs/bord-spock-hand.png';
 
 import React, { useState } from "react";
 
@@ -22,14 +25,14 @@ function Home() {
     const knowMore = () => {
 
         if (showStyle !== 'know_more_content show') setShowStyle('know_more_content show');
-        else setShowStyle('know_more_content hide')
+        else setShowStyle('know_more_content hide');
 
         if (showStyleBtn !== 'btn click') setShowStyleBtn('btn click');
-        else setShowStyleBtn('btn')
+        else setShowStyleBtn('btn');
     }
 
     function playGame () {
-        window.location.href = '/game'
+        window.location.href = '/game';
     }
 
     return (

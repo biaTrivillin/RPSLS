@@ -80,6 +80,19 @@
     opacity: 1;
   }
 }
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 footer {
   background-color: #065856;
   font-size: 1.5rem;

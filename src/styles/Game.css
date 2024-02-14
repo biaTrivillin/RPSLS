@@ -80,14 +80,32 @@
     opacity: 1;
   }
 }
-.warning_title_container h1 {
-  text-align: center;
-  padding-top: 4rem;
-  font-size: 2.5rem;
-  opacity: 0;
-  animation: appear-pop 0.5s 1.5s 1 forwards;
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
+@keyframes reveal-choice {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(1rem);
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .game_container {
   display: flex;
   align-items: center;
@@ -135,6 +153,15 @@
   transform: rotate(-120deg);
 }
 
+.none_animation {
+  opacity: 0;
+  animation: appear-pop 0.5s 1.5s 1 forwards;
+}
+
+.choice_animation {
+  animation: appear-pop 0.5s 1.5s 1 forwards, fade-out 1s ease-in-out 1 forwards, reveal-choice 1s ease-in 1s 1 forwards;
+}
+
 .selector_container {
   display: flex;
   align-items: center;
@@ -167,6 +194,29 @@
   width: 6rem;
 }
 
+.enabled {
+  opacity: 1;
+}
+.enabled:hover {
+  transform: scale(1.2);
+}
+.enabled:active {
+  transform: scale(0.9);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.warning_title_container h1 {
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: appear-pop 0.5s 1.5s 1 forwards;
+}
+
 .warning_container {
   display: flex;
   align-items: center;
@@ -187,6 +237,14 @@
   font-weight: 400;
   font-size: 2rem;
   text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
 
 @media (min-width: 720px) {
@@ -233,61 +291,4 @@
   .warning_container h1, .warning_container p {
     transform: scale(1.5);
   }
-}
-.none_animation {
-  opacity: 0;
-  animation: appear-pop 0.5s 1.5s 1 forwards;
-}
-
-.choice_animation {
-  animation: appear-pop 0.5s 1.5s 1 forwards, fade-out 1s ease-in-out 1 forwards, reveal-choice 1s ease-in 1s 1 forwards;
-}
-
-@keyframes reveal-choice {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(1rem);
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(1rem);
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.enabled {
-  opacity: 1;
-}
-.enabled:hover {
-  transform: scale(1.2);
-}
-.enabled:active {
-  transform: scale(0.9);
-}
-
-.disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: flex;
 }/*# sourceMappingURL=Game.css.map */

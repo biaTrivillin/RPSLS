@@ -1,59 +1,54 @@
-import GameWarning from "../layout/GameWarning"
+import GameWarning from '../layout/GameWarning'
 import Header from '../layout/Header'
-import Footer from "../layout/Footer"
-import Button from "../layout/Button"
-import GameWarningTitle from "../layout/GameWaningTitle"
+import Footer from '../layout/Footer'
+import Button from '../layout/Button'
+import GameWarningTitle from '../layout/GameWaningTitle'
+
 import BordRockHand from '../../imgs/bord-rock-hand.png'
 import BordPaperHand from '../../imgs/bord-paper-hand.png'
 import BordScissorsHand from '../../imgs/bord-scissors-hand.png'
 import BordLizardHand from '../../imgs/bord-lizard-hand.png'
 import BordSpockHand from '../../imgs/bord-spock-hand.png'
+
 import Rock from '../../imgs/rock-hand.png'
 import Paper from '../../imgs/paper-hand.png'
 import Scissors from '../../imgs/scissors-hand.png'
 import Lizard from '../../imgs/lizard-hand.png'
 import Spock from '../../imgs/spock-hand.png'
+
 import '../../styles/Game.css'
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 
 function Game() {
 
     const [isItDisabled, setBtnDisabled] = useState(false);
-
     const [btnStyle, setBtnStyle] = useState('enabled');
 
     const [showStyleSelector, setShowStyleSelector] = useState('selector_container');
-
     const [showStyleWarning, setShowStyleWarning] = useState('warning_container');
-
-    const [isThisImg, setImgChoice] = useState(Rock);
-
     const [animationChoice, setAnimationChoice] = useState('none_animation');
 
-    const [gameMessage, setgameMessage] = useState('MAKE YOUR CHOICE');
-
+    const [isThisImg, setImgChoice] = useState(Rock);
     const [computerImg, setComputerImg] = useState(Rock);
 
+    const [gameMessage, setgameMessage] = useState('MAKE YOUR CHOICE');
     const [gameWarningTitle, setGameWarningTitle] = useState("IT'S A TIE");
-
     const [elementOneText, setElementOneText] = useState("rock");
-
     const [elementTwoText, setElementTwoText] = useState("rock");
-
     const [elementAction, setElementAction] = useState("wins");
 
     const userClick = (userChoice, choiceImg) => {
         
 
         if (isItDisabled !== false) setBtnDisabled(false);
-        else setBtnDisabled(true)
+        else setBtnDisabled(true);
 
         if (btnStyle !== 'disabled') setBtnStyle('disabled');
 
         if (animationChoice !== 'choice_animation') setAnimationChoice('choice_animation');
-        else setAnimationChoice('none_animation')
+        else setAnimationChoice('none_animation');
 
         setInterval(() => {
             if (isThisImg !== choiceImg) setImgChoice(choiceImg);
@@ -63,80 +58,74 @@ function Game() {
             if (isThisAWin === true && gameMessage !== "BAZINGA!") {
                 setgameMessage("BAZINGA!");
 
-                setGameWarningTitle("YOU WON")
+                setGameWarningTitle("YOU WON");
 
-                setElementOneText(userChoice)
+                setElementOneText(userChoice);
 
-                setElementTwoText(computerChoice)
+                setElementTwoText(computerChoice);
 
             } else {
                 
-                setElementOneText(computerChoice)
+                setElementOneText(computerChoice);
 
-                setElementTwoText(userChoice)
+                setElementTwoText(userChoice);
 
-                setgameMessage('WHAT A SHAME!')
+                setgameMessage('WHAT A SHAME!');
 
-                setGameWarningTitle('YOU LOST')
+                setGameWarningTitle('YOU LOST');
             }
             
             if (isThisAWin === false && userChoice === computerChoice) {
                 setgameMessage("YOU STILL A LOSER!");
 
-                setGameWarningTitle("IT'S A TIE")
+                setGameWarningTitle("IT'S A TIE");
 
-                setElementAction('ties with')
+                setElementAction('ties with');
 
             }
 
             if (showStyleSelector !== 'selector_container hide') setShowStyleSelector('selector_container hide');
-            else setShowStyleSelector('selector_container')
+            else setShowStyleSelector('selector_container');
 
             if (showStyleWarning !== 'warning_container show') setShowStyleWarning('warning_container show');
-            else setShowStyleWarning('warning_container')
+            else setShowStyleWarning('warning_container');
 
         }, 1000);
 
-        const optionsArray = ['rock', 'paper', 'scissors', 'lizard', 'spock']
+        const optionsArray = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+        const imgsArray = [Rock, Paper, Scissors, Lizard, Spock];
 
-        const imgsArray = [Rock, Paper, Scissors, Lizard, Spock]
+        const choiceIndex = Math.floor(Math.random() * 4);
+        const computerChoice = optionsArray[choiceIndex];
+        const computerChoiceImg = imgsArray[choiceIndex];
 
-        const choiceIndex = Math.floor(Math.random() * 4) ;
-
-        const computerChoice = optionsArray[choiceIndex] 
-
-        const computerChoiceImg = imgsArray[choiceIndex]
-
-        let isTheWinner = 'rock'
-
-        let isTheLoser = 'rock'
-
-        let isThisAWin = false
+        let isTheWinner = 'rock';
+        let isTheLoser = 'rock';
+        let isThisAWin = false;
 
         if(
             (userChoice === 'scissors' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'rock' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'scissors') || (userChoice === 'scissors' && computerChoice === 'lizard') || (userChoice === 'lizard' && computerChoice === 'paper') || (userChoice === 'paper' && computerChoice === 'spock') || (userChoice === 'spock' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'scissors')
-        ) isThisAWin = true
+        ) isThisAWin = true;
 
         if (isThisAWin === true) {
-            isTheWinner = userChoice
-            isTheLoser = computerChoice
+            isTheWinner = userChoice;
+            isTheLoser = computerChoice;
         }
         else {
-            isTheWinner = computerChoice
-            isTheLoser = userChoice
+            isTheWinner = computerChoice;
+            isTheLoser = userChoice;
         }
 
-        if ((isTheWinner === 'scissors') && (isTheLoser === 'paper')) setElementAction('cuts')
-        if ((isTheWinner === 'paper') && (isTheLoser === 'rock')) setElementAction('covers')
-        if ((isTheWinner === 'rock') && (isTheLoser === 'lizard')) setElementAction('crushes')
-        if ((isTheWinner === 'lizard') && (isTheLoser === 'spock')) setElementAction('poisons')
-        if ((isTheWinner === 'spock') && (isTheLoser === 'scissors')) setElementAction('smashes')
-        if ((isTheWinner === 'scissors') && (isTheLoser === 'lizard')) setElementAction('decapitates')
-        if ((isTheWinner === 'lizard') && (isTheLoser === 'paper')) setElementAction('eats')
-        if ((isTheWinner === 'paper') && (isTheLoser === 'spock')) setElementAction('disproves')
-        if ((isTheWinner === 'spock') && (isTheLoser === 'rock')) setElementAction('vaporizes')
-        if ((isTheWinner === 'rock') && (isTheLoser === 'scissors')) setElementAction('crushes')
-
+        if ((isTheWinner === 'scissors') && (isTheLoser === 'paper')) setElementAction('cuts');
+        if ((isTheWinner === 'paper') && (isTheLoser === 'rock')) setElementAction('covers');
+        if ((isTheWinner === 'rock') && (isTheLoser === 'lizard')) setElementAction('crushes');
+        if ((isTheWinner === 'lizard') && (isTheLoser === 'spock')) setElementAction('poisons');
+        if ((isTheWinner === 'spock') && (isTheLoser === 'scissors')) setElementAction('smashes');
+        if ((isTheWinner === 'scissors') && (isTheLoser === 'lizard')) setElementAction('decapitates');
+        if ((isTheWinner === 'lizard') && (isTheLoser === 'paper')) setElementAction('eats');
+        if ((isTheWinner === 'paper') && (isTheLoser === 'spock')) setElementAction('disproves');
+        if ((isTheWinner === 'spock') && (isTheLoser === 'rock')) setElementAction('vaporizes');
+        if ((isTheWinner === 'rock') && (isTheLoser === 'scissors')) setElementAction('crushes');
     }
 
 

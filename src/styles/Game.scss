@@ -1,15 +1,7 @@
 @import 'variables-functions';
 @import 'animations';
 
-.warning_title_container {
-    h1 {
-       text-align: center;
-       padding-top: 4rem; 
-       font-size: 2.5rem;
-       opacity: 0;
-       animation: appear-pop 0.5s 1.5s 1 forwards; 
-    }
-}
+// --------------------- GAME CONTAINER ---------------------
 
 .game_container {
     @include flex-center-column;
@@ -41,8 +33,6 @@
         position: absolute;
         top: 0.5rem;
         left: 0.5rem;
-        // opacity: 0;
-        // animation: appear-pop 0.5s 1.5s 1 forwards; 
     }
 
     div {
@@ -64,12 +54,22 @@
     
 }
 
+.none_animation {
+    opacity: 0;
+    animation: appear-pop 0.5s 1.5s 1 forwards;
+}
+
+.choice_animation {
+    animation: appear-pop 0.5s 1.5s 1 forwards, fade-out 1s ease-in-out 1 forwards, reveal-choice 1s ease-in 1s 1 forwards;
+}
+
+// --------------------- SELECTOR CONTAINER ---------------------
+
 .selector_container {
 
     @include flex-center-line;
     flex-wrap: wrap;
     margin: 5rem 0 8rem 0;
-    // display: none;
 
     button {
         background-color: transparent;
@@ -103,6 +103,35 @@
     }
 }
 
+.enabled {
+    opacity: 1;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+// --------------------- WARNINGS ---------------------
+
+.warning_title_container {
+    h1 {
+       text-align: center;
+       padding-top: 4rem; 
+       font-size: 2.5rem;
+       opacity: 0;
+       animation: appear-pop 0.5s 1.5s 1 forwards; 
+    }
+}
+
 .warning_container {
     @include flex-center-column;
     gap: 2rem;
@@ -123,6 +152,16 @@
         text-align: center;
     }
 }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+// --------------------- MEDIA QUERIES ---------------------
 
 @media (min-width: 720px) {
     .content_presentation {
@@ -181,70 +220,4 @@
         }
         
     }
-}
-
-.none_animation {
-    opacity: 0;
-    animation: appear-pop 0.5s 1.5s 1 forwards;
-}
-
-.choice_animation {
-    animation: appear-pop 0.5s 1.5s 1 forwards, fade-out 1s ease-in-out 1 forwards, reveal-choice 1s ease-in 1s 1 forwards;
-}
-
-@keyframes reveal-choice {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
-        transform: translateY(1rem);
-        transform: translateX(1rem);
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-        transform: translateY(1rem);
-        transform: translateX(1rem);
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.enabled {
-    opacity: 1;
-
-    &:hover {
-        transform: scale(1.2);
-    }
-
-    &:active {
-        transform: scale(0.9);
-    }
-}
-
-.disabled {
-    opacity: 0.5;
-    cursor: default;
-}
-
-.hide {
-    display: none;
-}
-
-.show {
-    display: flex;
 }
